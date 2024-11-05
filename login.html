@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel_D</title>
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./fonts/material-icons.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.11.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <style>
+        .cart-no{
+            position: relative;
+            bottom: 5rem;
+            left: 1.7rem;
+        }
+       .cart-items li{
+            padding: 4px;
+       }
+    </style>
+</head>
+
+<body id="home" class="">
+    <div class="navbar-fixed">
+        <nav class="teal">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo">Travel_D</a>
+                    <a href="#" data-target="mobilen" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    
+                    <ul class="right hide-on-med-and-down">
+                        <li><a  class="active" href="#home" >Home</a></li>
+                        <li><a href="#search">Search</a></li>
+                        <li><a href="#popular">Popular Places</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                
+                        <li>
+                            <span class="nav-icon sidenav-trigger" data-target="slide-out">
+                                <i class="material-icons" id="list">shopping_cart</i><span class="cart-no">0</span>
+                            </span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobilen">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#search">Search</a></li>
+        <li><a href="#popular">Popular Places</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- <ul class="sidenav right" id="slide-out">
+        
+    </ul> -->
+
+    <ul id="slide-out" class="sidenav grey">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="./img/5a6ddd1bb4587f3897b7ec19b2d712d9.jpg">
+                </div>
+                <a href="#user"><img class="circle" src="./img/bare-tree-birds-dawn-2138922.jpg"></a>
+                <a href="#name"><span class="white-text name">John Doe</span></a>
+                <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
+        <div class="">
+            
+            <div class="cart-content">
+                <!-- cart items -->
+                <div class="card-content">
+                    
+                    <ul class="cart-items"></ul>
+                </div>
+                
+                <!--end of cart items -->
+            </div>
+            
+            <div class="cart-footer container">
+                <h3><span class="cart-total">0</span></h3>
+                <div>
+                    <button class="clear-cart banner-btn waves-effect waves-light">clear cart</button>
+                    <button class="checkOut banner-btn btn-small">Check out</button>
+                </div>
+            </div>
+        </div>
+    </ul>
+
+
+    <div class="container" style="width: 40%;">
+        <div class="card">
+            <div class="row">
+                <form class="col s12" id="loginIn">
+                    <div class="row">
+                       <div>
+                            <h2 class="center">Login</h2>
+                       </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="icon_prefix" type="email" class="validate" data-length="10">
+                            <label for="icon_prefix">Email</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="password" type="password" class="validate" data-length="20">
+                            <label for="password">Password</label>
+                            <span class="right">
+
+                                <a href="./register.html" class="text-right">
+                                    don't have an account?
+                                </a>
+                            </span>
+                            
+                        </div>
+                        <div class="input-field col s12">
+                            <label>
+                                <input type="checkbox" required/>
+                                <span>agree to terms..</span>
+                            </label>
+                        </div>
+                        <div class="input-field col s12">
+                            <button style="width: 100%;margin-top: 2rem;" id="loginForm" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                              </button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/materialize.js"></script>
+    <script src="./js/app.js"></script>
+
+
+    <script>
+        //USER RECORDS
+        // const users = [
+        //     { id: 1, name: 'emelie', email:'ezehigc@gmail.com', password:'12345', age: 15, url:'user.jpg', state:'ANAMBRA', gender:'M'},
+        //     { id: 2, name: 'chisom', email:'som@gmail.com', password:'0000', age: 25, url:'user.jpg', state:'ABUJA', gender:'F'},
+        //     { id: 3, name: 'ebuka', email:'ebuka@gmail.com', password:'12345', age: 30, url:'user.jpg', state:'LAGOS', gender:'M'},
+        //     { id: 4, name: 'ekene', email:'ekene@gmail.com', password:'12345', age: 40, url:'user.jpg', state:'ENUGU', gender:'M'},
+        //     { id: 5, name: 'amaka', email:'amaka@gmail.com', password:'12345', age: 35, url:'user.jpg', state:'IMO', gender:'F'},
+            
+        // ];
+
+        // localStorage.setItem('user_records', JSON.stringify(users));
+
+        document.addEventListener('DOMContentLoaded', function () {
+            usersData = JSON.parse(localStorage.getItem('user_records')) || [];
+
+        });
+
+        document.getElementById('loginForm').onclick = function (e) {
+            e.preventDefault();
+            // alert('here');
+
+            let email = document.getElementsByClassName('validate')[0].value;
+            let password = document.getElementsByClassName('validate')[1].value;
+
+            
+            if (email != "" && password != "") {
+                // console.log({email,password});
+                let user = usersData.find(user => user.email == email && user.password == password); //filter 
+                if (user) {
+                    console.log(user);
+                    localStorage.setItem('user', JSON.stringify(user));
+                    alert('Welcome Back');
+                    location.href= '/index.html';
+                    
+                    // 
+                }else{
+                    alert('Incorrect username or password');
+                    
+                }
+               
+                
+            }else{
+                console.log('empty');
+
+            }
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

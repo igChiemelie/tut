@@ -1,0 +1,28 @@
+.section-search input{
+    padding: 5px !important;
+    font-size: 18px !important;
+    width: 90% !important;
+    border: #f4f4f4 2px solid !important;
+}
+.section-follow .fa-4x{
+    margin: 5px 10px;
+
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+#list{
+    cursor: pointer;
+}
+.cart-btn{
+   
+    border: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 15px;
+    cursor: pointer;
+}

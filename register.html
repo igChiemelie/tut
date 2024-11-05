@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel_D</title>
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./fonts/material-icons.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.11.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <style>
+        .cart-no {
+            position: relative;
+            bottom: 5rem;
+            left: 1.7rem;
+        }
+
+        .cart-items li {
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body id="home" class="">
+    <div class="navbar-fixed">
+        <nav class="teal">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo">Travel_D</a>
+                    <a href="#" data-target="mobilen" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+
+                    <ul class="right hide-on-med-and-down">
+                        <li><a class="active" href="#home">Home</a></li>
+                        <li><a href="#search">Search</a></li>
+                        <li><a href="#popular">Popular Places</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+
+                        <li>
+                            <span class="nav-icon sidenav-trigger" data-target="slide-out">
+                                <i class="material-icons" id="list">shopping_cart</i><span class="cart-no">0</span>
+                            </span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobilen">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#search">Search</a></li>
+        <li><a href="#popular">Popular Places</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- <ul class="sidenav right" id="slide-out">
+        
+    </ul> -->
+
+    <ul id="slide-out" class="sidenav grey">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="./img/5a6ddd1bb4587f3897b7ec19b2d712d9.jpg">
+                </div>
+                <a href="#user"><img class="circle" src="./img/bare-tree-birds-dawn-2138922.jpg"></a>
+                <a href="#name"><span class="white-text name">John Doe</span></a>
+                <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
+        <div class="">
+
+            <div class="cart-content">
+                <!-- cart items -->
+                <div class="card-content">
+
+                    <ul class="cart-items"></ul>
+                </div>
+
+                <!--end of cart items -->
+            </div>
+
+            <div class="cart-footer container">
+                <h3><span class="cart-total">0</span></h3>
+                <div>
+                    <button class="clear-cart banner-btn waves-effect waves-light">clear cart</button>
+                    <button class="checkOut banner-btn btn-small">Check out</button>
+                </div>
+            </div>
+        </div>
+    </ul>
+
+
+    <div class="container" style="width: 40%;">
+        <div class="card">
+            <h2 class="center">Register</h2>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Placeholder" id="name" type="text" class="validate">
+                            <label for="name">Name</label>
+                        </div>
+                        
+                    </div>
+                   
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="cpassword" type="password" class="validate">
+                            <label for="cpassword">Confirm Password</label>
+                        </div>
+                    </div>
+                   
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="tel" type="tel" class="validate">
+                            <label for="tel">phone</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label>Religion</label>
+                        <select id="religion" class="browser-default">
+                          <option value="" disabled selected>Choose your option</option>
+                          <option value="Christian">Christian</option>
+                          <option value="Muslim">Muslim</option>
+                          <option value="Atheist">Atheist</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <p class="grey-text" style="padding: 1rem;">
+                            Gender
+                        </p>
+                        <label>
+                            <input class="with-gap" name="gender" type="radio" value="male"/>
+                            <span>Male</span>
+                          </label>
+                        <label>
+                            <input class="with-gap" name="gender" type="radio" value="female"/>
+                            <span>Female</span>
+                          </label>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="state" type="text" class="validate">
+                            <label for="state">State</label>
+                            <span class="right">
+
+                                <a href="./login.html" class="text-right">
+                                    already have an account??
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                
+
+
+
+                    <div style="padding: 2rem;">
+                        <button type="submit" id="RegForm" style="width: 100%;" class="btn waves-effect waves-effect">Submit</button>
+                   <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/materialize.js"></script>
+    <script src="./js/app.js"></script>
+
+
+    <script>
+
+        document.getElementById('RegForm').onclick = function (e) {
+            e.preventDefault();
+            // alert('here');
+
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let cpassword = document.getElementById('cpassword').value;
+            let tel = document.getElementById('tel').value;
+            let state = document.getElementById('state').value;
+
+            // Get the selected radio button value for gender
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let religion = document.getElementById('religion').value;
+
+            
+            if (name != "" && email != "" && password != "" && cpassword != "" && tel != "" && state != "" && gender != "" && religion != "") {
+                
+                if (password == cpassword) {
+
+                    const confirmation = confirm("Are you sure you want to continue?");
+                    if (confirmation) {
+                        // window.location.href = "google.com"; // Redirect to the logout URL
+                       // Retrieve existing data from localStorage or initialize an empty array
+                        let usersData = JSON.parse(localStorage.getItem('user_records')) || [];
+
+                        // Determine the next ID
+                        let nextId = usersData.length > 0 ? Math.max(...usersData.map(user => user.id)) + 1 : 1;
+                        // Create a new user object
+                        let newUser = {
+                            id: nextId, // Increment ID
+                            name,
+                            email,
+                            password,  // Store passwords carefully in real applications (consider hashing)
+                            tel,
+                            state,
+                            gender,
+                            religion
+                        };
+
+                        // Push the new user object to the usersData array
+                        usersData.push(newUser);
+
+                        // Save the updated usersData array back to localStorage
+                        localStorage.setItem('user_records', JSON.stringify(usersData));
+                        alert('Registration Successful');
+                        location.href = './login.html';
+                    } else {
+                        // Cancel logout
+                        console.log("Logout canceled.");
+                       document.getElementById('password').value = '';
+                       document.getElementById('cpassword').value = '';
+
+                    }
+
+                }else{
+                    alert('Password doesn\'t match');
+                }
+            }else{
+                alert('Fill the form');
+            }
+
+        }
+
+        
+        
+        
+
+    </script>
+</body>
+
+</html>
